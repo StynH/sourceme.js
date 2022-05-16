@@ -1,0 +1,31 @@
+.sourceme-sourcecode-badge{
+    display: none;
+    opacity: 0;
+    background-color: #fff;
+    padding: 5px 10px 5px 5px;
+    border-radius: 15px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+}
+
+.sourceme-sourcecode-badge i{
+    margin-right: 2px;
+}
+
+.sourceme-sourcecode-badge a{
+    font-style: normal;
+    text-decoration: none;
+    color: #14bf98;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.sourceme-sourcecode-badge.load{
+    display: inline-block;
+}

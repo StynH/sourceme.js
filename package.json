@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "sourceme",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,18 +18,21 @@
     "@babel/plugin-syntax-dynamic-import": "^7.7.4",
     "@babel/plugin-transform-async-to-generator": "^7.7.4",
     "@babel/plugin-transform-regenerator": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.16.0",
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
-    "@types/jquery": "^3.3.31",
     "babel-loader": "^8.0.6",
     "babel-minify-webpack-plugin": "^0.3.1",
     "babel-polyfill": "^6.26.0",
     "typescript": "^3.7.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "@babel/plugin-transform-runtime": "^7.16.0"
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "@types/jquery": "^3.5.14",
+    "@types/lodash": "^4.14.182",
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1"
   },
   "repository": {
     "type": "git",
@@ -41,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/StynVanDeHaterd/project/issues"
   },
-  "homepage": "https://github.com/StynVanDeHaterd/project#readme"
+  "homepage": "https://github.com/StynVanDeHaterd/project#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

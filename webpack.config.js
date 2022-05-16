@@ -13,13 +13,18 @@ module.exports = {
                 exclude: /node_modules/,
                 sideEffects: true,
             },
+            {
+                test: /\.css$/i,
+                exclude: /node_modules/,
+                use: ["style-loader", "css-loader"],
+            }
         ],
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
     },
     output: {
-        filename: 'project.js',
+        filename: 'sourceme.js',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'umd',
         umdNamedDefine: true
