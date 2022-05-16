@@ -55,9 +55,8 @@ export class SourceMe{
                                 badge.css("opacity", 1);
                             }, 1);
                         }
-                        console.log(this.counters[div.id].counter)
                     }
-                }, 1);
+                }, 0);
             }).on("mouseleave", () => {
                  clearInterval(this.counters[div.id].handler);
             });
