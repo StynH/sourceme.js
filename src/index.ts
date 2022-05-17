@@ -1,4 +1,3 @@
-import _, {isNull, isUndefined} from "lodash";
 import "./style.css";
 
 type SourcedDiv = {
@@ -33,7 +32,7 @@ export class SourceMe{
 
     private start(): void{
         if(!SourceMe.isLoadedOnMobile()){
-            _.forEach(this.config.divs, (div: SourcedDiv) => {
+            for(let div: SourcedDiv of this.config.divs){
                 const element = $(`#${div.id}`);
                 const badge = $(`
                 <div class="sourceme-sourcecode-badge">
@@ -63,12 +62,12 @@ export class SourceMe{
                 });
 
                 element.append(badge);
-            });
+            };
         }
     }
 
     private mergeDefaultConfig(config: Config | undefined | null, defaultConfig: Config): Config{
-        if(isNull(config) || isUndefined(config)){
+        if(config === null || config === undefined){
             return defaultConfig;
         }
 
