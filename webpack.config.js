@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MinifyPlugin = require("babel-minify-webpack-plugin");
+const WebpackObfuscatorPlugin = require('webpack-obfuscator');
 
 module.exports = {
     watch: true,
@@ -30,6 +31,9 @@ module.exports = {
         umdNamedDefine: true
     },
     plugins: [
-        new MinifyPlugin({}, {})
+        new MinifyPlugin({}, {}),
+        new WebpackObfuscatorPlugin ({
+            rotateStringArray: true
+        })
     ]
 };
