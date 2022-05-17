@@ -17,7 +17,7 @@ type Config = {
 
 export class SourceMe{
     private config: Config;
-    private counters: {[id: string] : Timer};
+    private readonly counters: {[id: string] : Timer};
 
     public constructor(config: Config | undefined | null = undefined) {
         let defaultConfig: Config = {
@@ -32,7 +32,7 @@ export class SourceMe{
 
     private start(): void{
         if(!SourceMe.isLoadedOnMobile()){
-            for(let div: SourcedDiv of this.config.divs){
+            for(let div of this.config.divs){
                 const element = $(`#${div.id}`);
                 const badge = $(`
                 <div class="sourceme-sourcecode-badge">
@@ -62,7 +62,7 @@ export class SourceMe{
                 });
 
                 element.append(badge);
-            };
+            }
         }
     }
 
