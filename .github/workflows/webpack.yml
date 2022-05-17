@@ -25,5 +25,5 @@ jobs:
     - name: Build
       run: |
         npm install
-        webpack --config ./webpack.config.js
+        webpack --config ./webpack.config.js --mode=production
 
